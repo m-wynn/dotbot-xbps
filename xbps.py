@@ -65,7 +65,7 @@ class XBPS(dotbot.Plugin):
                                    stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT)
 
-        out = process.stdout.read()
+        out = str(process.stdout.read())
         process.stdout.close()
 
         for item in self._strings.keys():
